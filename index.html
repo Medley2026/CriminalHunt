@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRIMINAL HUNT — Volume I</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="topbar">
+  <div class="brand">CRIMINAL <span>HUNT</span></div>
+  <div class="issue">VOL. 01 • THE LOST MEMORY</div>
+</header>
+
+<main>
+  <section class="cover">
+    <div class="halftone"></div>
+    <div class="cover-copy">
+      <div class="burst">A NEW<br>MYSTERY!</div>
+      <p class="kicker">AN INTERACTIVE COMIC EXPERIENCE</p>
+      <h1>THE<br><span>LOST</span><br>MEMORY</h1>
+      <p class="subtitle">You solved the case.<br>You just don't remember it.</p>
+      <button class="start" onclick="document.querySelector('#chapter1').scrollIntoView({behavior:'smooth'})">START HUNT →</button>
+    </div>
+    <div class="hero-silhouette">
+      <div class="moon"></div>
+      <div class="detective"></div>
+      <div class="city"></div>
+    </div>
+  </section>
+
+  <section id="chapter1" class="comic-page">
+    <div class="page-title"><span>CHAPTER 01</span><h2>YOU WAKE UP...</h2></div>
+
+    <div class="panel-grid">
+      <article class="panel wide dark">
+        <div class="caption">YOU WAKE UP FROM A LONG NAP...</div>
+        <div class="room-art bed"></div>
+        <div class="bubble thought">WHAT DAY IS IT...?</div>
+      </article>
+
+      <article class="panel">
+        <div class="caption">TWO WEEKS AGO...</div>
+        <div class="visual accident"></div>
+        <div class="narration">An accident. A hospital. Two years of memories temporarily gone.</div>
+      </article>
+
+      <article class="panel joker-panel">
+        <div class="caption">THEN YOU HEAR IT.</div>
+        <div class="joker-face">HA<br>HA<br>HA!</div>
+        <div class="bubble villain">OH, BATsy...<br>FINALLY AWAKE.</div>
+      </article>
+
+      <article class="panel wide">
+        <div class="caption">THE VOICE INSIDE YOUR HEAD</div>
+        <p class="big-dialogue">“I was waiting for you...<br>Now try to remember what happened before the accident.”</p>
+        <div class="bubble small">You know you don't want me here...<br>but I'm all you've got.</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="comic-page darker">
+    <div class="page-title"><span>CHAPTER 02</span><h2>THE CASE FILE</h2></div>
+    <div class="panel-grid two">
+      <article class="panel desk">
+        <div class="caption">THE ROOM IS A MESS.</div>
+        <div class="desk-art">
+          <div class="file">CASE<br>FILE</div>
+          <div class="lamp"></div><div class="paper p1"></div><div class="paper p2"></div>
+        </div>
+        <p class="narration">Something about the case file feels familiar.</p>
+        <div class="bubble thought">I'VE SOLVED THIS BEFORE...</div>
+      </article>
+      <article class="panel">
+        <div class="caption">THE COMPUTER</div>
+        <div class="monitor">
+          <div class="screen">
+            <div class="terminal">SYSTEM LOCKED<br><span>ENTER PASSWORD</span><br><br><b>_</b></div>
+          </div>
+        </div>
+        <p class="narration">You don't remember the password. But you know yourself well enough to know there must be a clue.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="comic-page">
+    <div class="page-title"><span>CHAPTER 03</span><h2>THE HINT</h2></div>
+    <div class="panel-grid">
+      <article class="panel wide drawer">
+        <div class="caption">SECOND DRAWER FROM THE TOP</div>
+        <div class="drawer-art">
+          <div class="drawer-box">CASE FILE</div>
+          <div class="note">HINT:<br><br><strong>LOOK AT THE COMIC BOOK<br>AT THE LAST DRAWER<br>FOR THE PASSWORD...</strong></div>
+        </div>
+      </article>
+      <article class="panel last-drawer">
+        <div class="caption">THE LAST DRAWER</div>
+        <div class="comic-book">
+          <div class="book-top">THE BATMAN WHO LAUGHS</div>
+          <div class="book-bottom">THE<br>GRIM<br>KNIGHT</div>
+          <div class="bat-symbol">◢</div>
+        </div>
+        <p class="narration">A familiar hardcover edition.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="login-section">
+    <div class="login-comic">
+      <div class="login-header">DETECTIVE TERMINAL // ACCESS REQUIRED</div>
+      <div class="login-body">
+        <p class="terminal-intro">The password worked in your memory. Now prove it.</p>
+        <label>USER NAME</label>
+        <input id="username" type="text" placeholder="Enter username">
+        <label>PASSWORD</label>
+        <input id="password" type="password" placeholder="Enter password">
+        <button onclick="unlock()">ACCESS SYSTEM</button>
+        <p id="loginMessage"></p>
+      </div>
+    </div>
+    <div id="reveal" class="reveal hidden">
+      <div class="stamp">ACCESS<br>GRANTED</div>
+      <h2>YOU GOT IN.</h2>
+      <p>The system opens... and you find something you were never supposed to forget.</p>
+      <div class="cliffhanger">TO BE CONTINUED...</div>
+      <a class="form-link" href="#" onclick="alert('Replace this link with your Microsoft Form URL in script.js'); return false;">CONTINUE THE HUNT →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>CRIMINAL HUNT</div>
+  <span>VOLUME I • CASE FILE: LOST MEMORY</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

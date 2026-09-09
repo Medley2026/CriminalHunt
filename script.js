@@ -1,24 +1,6 @@
-// Replace this with your actual Microsoft Form URL if the hunt continues into a form.
-const MICROSOFT_FORM_URL = "";
-
-function unlock(){
-  const user = document.getElementById("username").value.trim();
-  const pass = document.getElementById("password").value.trim();
-  const msg = document.getElementById("loginMessage");
-
-  // The comic gives the visible password clue as "BAtman wl".
-  // Keep the login intentionally playful rather than using it for real authentication.
-  if(pass.toLowerCase().replace(/\s+/g,"") === "batmanwl"){
-    msg.textContent = "PASSWORD ACCEPTED.";
-    msg.style.color = "#5cff85";
-    document.getElementById("reveal").classList.remove("hidden");
-    if(MICROSOFT_FORM_URL){
-      document.querySelector(".form-link").href = MICROSOFT_FORM_URL;
-      document.querySelector(".form-link").onclick = null;
-    }
-    setTimeout(()=>document.getElementById("reveal").scrollIntoView({behavior:"smooth",block:"center"}),250);
-  }else{
-    msg.textContent = "ACCESS DENIED — LOOK CLOSER, DETECTIVE.";
-    msg.style.color = "#ff4a4a";
-  }
-}
+const pages=[...document.querySelectorAll('.page')];let current=0;const num=document.getElementById('num');const prev=document.getElementById('prev');const next=document.getElementById('next');const hint=document.getElementById('hint');
+const formUrl=''; // paste your Microsoft Form URL here
+function showPage(i,direction=1){if(i<0||i>=pages.length)return;const old=pages[current];old.classList.remove('active');old.classList.add('turnOut');setTimeout(()=>old.classList.remove('turnOut'),500);current=i;pages[current].classList.add('active');num.textContent=String(current+1).padStart(2,'0');prev.disabled=current===0;next.disabled=current===pages.length-1;hint.textContent=current===2?'YOU HAVE REACHED THE PASSWORD PAGE. ENTER THE CLUE BELOW.':'TURN THE PAGE... THE MEMORY IS COMING BACK.'}
+next.onclick=()=>showPage(current+1,1);prev.onclick=()=>showPage(current-1,-1);document.getElementById('start').onclick=()=>document.getElementById('comic').scrollIntoView({behavior:'smooth'});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next.click();if(e.key==='ArrowLeft')prev.click()});
+document.getElementById('unlock').onclick=()=>{const p=document.getElementById('pass').value.trim().replace(/\s+/g,'').toLowerCase();const r=document.getElementById('result');if(p==='batmanwl'){r.textContent='PASSWORD WORKED. SYSTEM UNLOCKED...';r.style.color='#b7e000';document.getElementById('secret').classList.add('show');if(formUrl){const a=document.getElementById('formLink');a.href=formUrl}else{document.getElementById('formLink').onclick=()=>{alert('Add your Microsoft Form URL in script.js');return false}}document.getElementById('secret').scrollIntoView({behavior:'smooth',block:'center'})}else{r.textContent='ACCESS DENIED... REMEMBER THE COMIC.';r.style.color='#ff4050'}};

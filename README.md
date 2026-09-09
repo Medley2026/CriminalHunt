@@ -1,22 +1,12 @@
-# Criminal Hunt — Volume I
+# Criminal Hunt — Vol. 1
 
-A comic-style interactive website based on the uploaded Criminal Hunt Vol. 1 story.
+This version uses the actual three pages from the supplied Criminal Hunt Vol. 1 PDF as the comic artwork, so the original cartoons, panel arrangement, wording, Joker dialogue and visual layout are preserved. The website adds only surrounding animation, page-turn transitions, Joker-themed atmosphere and the interactive password sequence.
 
-## Run
-Open `index.html` in a browser.
+## Publish
+Upload the contents of this folder to your GitHub `CriminalHunt` repository and keep `index.html` at the repository root.
 
-## Included
-- Comic-book cover
-- Chapter/panel layout
-- Story panels based on the PDF
-- Interactive computer/password scene
-- Password clue interaction
-- "Access Granted" cliffhanger
-- Responsive mobile layout
+Expected GitHub Pages URL:
+https://medley2026.github.io/CriminalHunt/
 
 ## Microsoft Form
-Open `script.js` and replace:
-const MICROSOFT_FORM_URL = "";
-with your actual Microsoft Forms URL.
-
-The current demo accepts the story's visible password clue (`BAtman wl`, ignoring spaces/case).
+Open `script.js` and set `formUrl` to your Microsoft Form URL.

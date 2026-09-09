@@ -1,61 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Criminal Hunt | Vol. 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Criminal Hunt — MEDLEY 2026 · COMIC CeNSE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="joker-bg"></div>
-<div class="smoke smoke1"></div><div class="smoke smoke2"></div>
-<div class="top">
-  <div class="logo">CRIMINAL <b>HUNT</b></div>
-  <div class="issue">CASE FILE // VOL. 01</div>
-</div>
-<section class="intro">
-  <div class="glitch">WELCOME, BATsy...</div>
-  <h1>THE LOST<br><span>MEMORY</span></h1>
-  <p>A COMIC-STYLE CRIMINAL HUNT</p>
-  <button id="start">START THE HUNT <span>→</span></button>
-  <div class="joker-quote">“Ohh Batsy! You are finally awake...”</div>
+<div class="grain"></div>
+<nav class="nav">
+  <a class="brand" href="#top">COMIC <span>CeNSE</span></a>
+  <div class="nav-links">
+    <a href="#case">CASE</a><a href="#hunt">HUNT</a><a href="#terminal">TERMINAL</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-copy">
+    <p class="eyebrow">MEDLEY 2026 · CASE FILE 01</p>
+    <h1>CRIMINAL<br><span>HUNT</span></h1>
+    <p class="tagline">A memory. An accident. A voice you can't escape.</p>
+    <a class="btn" href="#case">OPEN THE CASE →</a>
+  </div>
+  <div class="hero-art">
+    <div class="stamp">TOP<br>SECRET</div>
+    <div class="halftone"></div>
+    <img src="assets/joker-red.png" alt="Joker character">
+    <div class="speech big">OH BATSY...<br>YOU'RE FINALLY AWAKE.</div>
+  </div>
+</header>
+
+<main id="case">
+<section class="case-intro">
+  <div><span class="file-label">CASE FILE / 001</span><h2>THE MEMORY<br>THAT VANISHED.</h2></div>
+  <p>You wake up from a long nap... You try to remember what day it is. You feel a headache as you strain to remember what happened to you <b>2 WEEKS BEFORE.</b></p>
 </section>
-<main id="comic">
-  <div class="comic-head"><span>CRIMINAL HUNT</span><strong>VOLUME 01</strong><span>THE LOST MEMORY</span></div>
-  <div class="book">
-    <div class="page active" data-page="0"><img src="page1.png" alt="Criminal Hunt Volume 1 page 1"></div>
-    <div class="page" data-page="1"><img src="page2.png" alt="Criminal Hunt Volume 1 page 2"></div>
-    <div class="page" data-page="2"><img src="page3.png" alt="Criminal Hunt Volume 1 page 3"></div>
+
+<section class="comic-page">
+  <div class="page-title"><span>ISSUE #01</span><b>THE VOICE IN YOUR HEAD</b><span>PAGE 01</span></div>
+
+  <div class="panel p-wide">
+    <p>YOU WAKE UP FROM A LONG NAP...<br><br>YOU TRY TO REMEMBER WHAT DAY IT IS....<br><br>YOU FEEL A HEADACHE AS YOU STRAIN TO REMEMBER WHAT HAPPENED TO YOU 2 WEEKS BEFORE....<br><br>AS THE HEADACHE SUBSIDES YOU HEAR A STRANGE VOICE FROM DEEP INSIDE YOUR MIND...</p>
+    <span class="panel-no">01</span>
   </div>
-  <div class="controls">
-    <button id="prev" disabled>← PREVIOUS</button>
-    <div class="counter"><span id="num">01</span> / 03</div>
-    <button id="next">NEXT PAGE →</button>
+
+  <div class="panel p-joker">
+    <img src="assets/joker-red.png" alt="Joker">
+    <div class="bubble">OHH BATsY! YOU ARE FINALLY AWAKE....<br>I WAS WAITING FOR YOU...<br>DO YOU REMEMBER ANYTHING OF OUR PAST.....</div>
+    <span class="panel-no">02</span>
   </div>
-  <div class="hint" id="hint">THE STORY IS WAITING. TURN THE PAGE.</div>
+
+  <div class="panel">
+    <p>YOU CAN HEAR JOKER'S VOICE LOUD AND CLEAR INSIDE YOUR HEAD.... YOU WANT TO SILENCE IT, BUT YOU COULDN'T.</p>
+    <span class="panel-no">03</span>
+  </div>
+
+  <div class="panel p-joker">
+    <img src="assets/joker-red.png" alt="Joker">
+    <div class="bubble">I KNOW YOU DON'T WANT ME HERE...BUT I AM WHAT ALL YOU GOT BATSY... NOW TRY TO REMEMBER WHAT HAPPENED BEFORE THE ACCIDENT...</div>
+    <span class="panel-no">04</span>
+  </div>
+
+  <div class="panel p-wide">
+    <p>HIS WORDS MADE YOU VAGUELY REMEMBER SOMETHING FROM THE PAST....<br>TWO WEEKS BEFORE, YOU GOT INTO AN ACCIDENT....<br><br>THE DOCTORS SAID YOU HAD LOST YOUR MEMORY OF PAST 2 YEARS TEMPORARILY AND DISCHARGED YOU AFTER A WEEK, SAYING YOU WOULD SLOWLY REGAIN THEM IN SOME TIME...</p>
+    <span class="panel-no">05</span>
+  </div>
+
+  <div class="panel p-joker wide-last">
+    <div class="bubble">YES...YOU ARE IN THE RIGHT TRACK BATSY! NOW LETS SEE WHAT GOT US INTO THIS ACCIDENT....</div>
+    <img src="assets/joker-red.png" alt="Joker">
+    <p>YOU TRY TO REMEMBER, BUT NO MATTER HOW HARD YOU TRY, YOU CAN'T REMEMBER ANYTHING MORE....</p>
+    <span class="panel-no">06</span>
+  </div>
+
+  <div class="panel p-wide final-panel">
+    <p>YOU LOOK AROUND THE ROOM AND IT'S MESSY...YOU LOOK AT THE CASE FILE NEAR YOU...<br><br>YOU CAN FEEL INTUITIVELY THAT YOU HAVE SOLVED THIS CASE FILE....<br>BUT YOU CAN'T REMEMBER ANYTHING ABOUT THE CASE FOR NOW...</p>
+    <span class="panel-no">07</span>
+  </div>
+</section>
+
+<section class="transition" id="hunt">
+  <div class="impact">KRAK!</div>
+  <div><p class="eyebrow">PAGE 02 · THE SEARCH BEGINS</p><h2>FOLLOW<br>THE CLUES.</h2></div>
+  <p>Even though you want him out of your head, his idea seems reasonable to try....</p>
+</section>
+
+<section class="comic-page green">
+  <div class="page-title"><span>ISSUE #01</span><b>THE PASSWORD</b><span>PAGE 02</span></div>
+
+  <div class="panel p-joker purple">
+    <div class="bubble jagged">HEY BATSY, YOU SHOULD CHECK YOUR COMPUTER. IT MIGHT HAVE SOME INFORMATION...</div>
+    <img src="assets/joker-purple.png" alt="Joker">
+    <span class="panel-no">08</span>
+  </div>
+
+  <div class="panel"><p>EVEN THOUGH YOU WANT HIM OUT OF YOUR HEAD, HIS IDEA SEEMS REASONABLE TO TRY...</p><span class="panel-no">09</span></div>
+
+  <div class="panel"><p>YOU STRUGGLE TO STAND UP FROM YOUR BED BUT EVENTUALLY YOU DID...<br><br>YOU SLOWLY MOVE TOWARDS YOUR WORKING DESK AND TURN ON YOUR COMPUTER</p><span class="panel-no">10</span></div>
+
+  <div class="panel computer-panel">
+    <img src="assets/computer.png" alt="Computer monitor">
+    <p>AS THE SYSTEM TURN ON....<br><br>IT WAS ASKING FOR A PASSWORD AND YOU DON'T REMEMBER IT...<br><br>AS YOU KNOW YOURSELF WELL, YOU ARE SURE THERE WILL BE A HINT FOR THE PASSWORD SOMEWHERE IN THE TABLE...</p>
+    <span class="panel-no">11</span>
+  </div>
+
+  <div class="panel clue-panel">
+    <p>YOU SEARCH THE DRAWERS, AND AS YOU SUSPECTED, THERE'S A HINT STUCK TO THE CASE FILE FOUND INSIDE THE 2 ND DRAWER FROM TOP....</p>
+    <div class="note">
+      <b>HINT:</b><br><br>LOOK AT THE COMIC BOOK AT THE LAST DRAWER FOR THE PASSWORD...
+    </div>
+    <span class="panel-no">12</span>
+  </div>
+
+  <div class="panel book-panel">
+    <div><p>YOU OPEN THE LAST DRAWER AND HAVE A LOOK AT THE COMIC MAGAZINE</p><p>“THE BATMAN WHO LAUGHS - THE GRIM KNIGHT” (STANDARD HARDCOVER EDITION)</p></div>
+    <img src="assets/grim-knight.jpg" alt="The Grim Knight comic cover">
+    <span class="panel-no">13</span>
+  </div>
+</section>
+
+<section class="terminal" id="terminal">
+  <div class="terminal-head"><span>PRIVATE SYSTEM</span><span>STATUS: LOCKED</span></div>
+  <div class="terminal-body">
+    <div class="screen-noise"></div>
+    <p class="mono">SECURE TERMINAL // MEMORY ARCHIVE</p>
+    <h2>THE PASSWORD WORKED.</h2>
+    <p>TYPE THE PASSWORD YOU FOUND IN THE CASE FILE.</p>
+    <form id="loginForm">
+      <label>USER NAME<input value="BATMAN WL" readonly></label>
+      <label>PASSWORD<input id="password" type="text" autocomplete="off" placeholder="ENTER PASSWORD"></label>
+      <button class="btn" type="submit">ACCESS FILE →</button>
+    </form>
+    <div id="result" class="result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="ending" id="ending">
+  <p class="eyebrow">CASE STATUS</p>
+  <h2>YOU FIND........</h2>
+  <div class="to-be">TO BE CONTINUED.....</div>
+  <p class="small">The story continues when the next clue is found.</p>
+</section>
 </main>
-<section class="interactive">
-  <div class="warning">⚠ CASE INTERACTION</div>
-  <h2>THE PASSWORD</h2>
-  <p>The final page contains the password clue. Enter it exactly as shown in the comic.</p>
-  <div class="terminal">
-    <label>USER NAME</label><input id="user" placeholder="BATMAN WL">
-    <label>PASSWORD</label><input id="pass" type="password" placeholder="ENTER PASSWORD">
-    <button id="unlock">ACCESS SYSTEM</button>
-    <div id="result"></div>
-  </div>
-  <div id="secret" class="secret">
-    <div class="stamp">ACCESS<br>GRANTED</div>
-    <h3>YOU FIND........</h3>
-    <div class="continue">TO BE CONTINUED.....</div>
-    <p>THE NEXT CASE IS LOCKED.</p>
-    <a id="formLink" href="#" target="_blank">CONTINUE THE HUNT →</a>
-  </div>
-</section>
-<footer>CRIMINAL HUNT <span>•</span> JOKER THEME <span>•</span> VOL. 01</footer>
+
+<footer><span>MEDLEY 2026</span><span>COMIC CeNSE · CRIMINAL HUNT</span></footer>
 <script src="script.js"></script>
 </body>
 </html>

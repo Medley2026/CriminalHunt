@@ -1,6 +1,17 @@
-const pages=[...document.querySelectorAll('.page')];let current=0;const num=document.getElementById('num');const prev=document.getElementById('prev');const next=document.getElementById('next');const hint=document.getElementById('hint');
-const formUrl=''; // paste your Microsoft Form URL here
-function showPage(i,direction=1){if(i<0||i>=pages.length)return;const old=pages[current];old.classList.remove('active');old.classList.add('turnOut');setTimeout(()=>old.classList.remove('turnOut'),500);current=i;pages[current].classList.add('active');num.textContent=String(current+1).padStart(2,'0');prev.disabled=current===0;next.disabled=current===pages.length-1;hint.textContent=current===2?'YOU HAVE REACHED THE PASSWORD PAGE. ENTER THE CLUE BELOW.':'TURN THE PAGE... THE MEMORY IS COMING BACK.'}
-next.onclick=()=>showPage(current+1,1);prev.onclick=()=>showPage(current-1,-1);document.getElementById('start').onclick=()=>document.getElementById('comic').scrollIntoView({behavior:'smooth'});
-document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next.click();if(e.key==='ArrowLeft')prev.click()});
-document.getElementById('unlock').onclick=()=>{const p=document.getElementById('pass').value.trim().replace(/\s+/g,'').toLowerCase();const r=document.getElementById('result');if(p==='batmanwl'){r.textContent='PASSWORD WORKED. SYSTEM UNLOCKED...';r.style.color='#b7e000';document.getElementById('secret').classList.add('show');if(formUrl){const a=document.getElementById('formLink');a.href=formUrl}else{document.getElementById('formLink').onclick=()=>{alert('Add your Microsoft Form URL in script.js');return false}}document.getElementById('secret').scrollIntoView({behavior:'smooth',block:'center'})}else{r.textContent='ACCESS DENIED... REMEMBER THE COMIC.';r.style.color='#ff4050'}};
+const form=document.getElementById("loginForm");
+const result=document.getElementById("result");
+form.addEventListener("submit",(e)=>{
+ e.preventDefault();
+ const value=document.getElementById("password").value.trim();
+ if(value.toLowerCase()==="batman wl"){
+   result.className="result ok";
+   result.textContent="ACCESS GRANTED // MEMORY ARCHIVE UNLOCKED.";
+   document.getElementById("ending").scrollIntoView({behavior:"smooth"});
+ }else{
+   result.className="result bad";
+   result.textContent="ACCESS DENIED // THAT'S NOT THE PASSWORD. CHECK THE LAST DRAWER.";
+ }
+});
+document.querySelectorAll(".panel").forEach((p,i)=>{
+ p.style.animationDelay=(i*45)+"ms";
+});
